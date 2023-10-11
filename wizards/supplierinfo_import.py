@@ -94,7 +94,7 @@ class paymentinfoImport(models.TransientModel):
         product = self.env['product.product']
         message = []
         rows_with_payments = []
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
         #path = os.path.abspath(os.path.dirname(__file__))
         path = '/tmp/%s' % self.filename
         # ~ f = open(path, 'a')
