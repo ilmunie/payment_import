@@ -147,7 +147,7 @@ class paymentinfoImport(models.TransientModel):
                     error = True
             if not error:
                 for inv_dict in invoices:
-                    inv = self.env['account.move'].search(inv_dict['invoice_id'])
+                    inv = self.env['account.move'].browse(inv_dict['invoice_id'])
                     payment = self.env['account.payment'].create({
                         'date': inv_dict['aux_payment_date'],
                         'payment_type': 'outbound',
