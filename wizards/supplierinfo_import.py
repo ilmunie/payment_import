@@ -161,7 +161,7 @@ class paymentinfoImport(models.TransientModel):
                     receivable_line = payment.line_ids.filtered('debit')
                     inv.js_assign_outstanding_line(receivable_line.id)
             self.state = 'done'
-            view = self.env.ref('roc_custom.view_paymentinfo_import')
+            view = self.env.ref('payment_import.view_paymentinfo_import')
             return {
                 'name': _('paymentinfo Import'),
                 'res_model': 'paymentinfo.import',
